@@ -1,0 +1,135 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    outline: 1px solid rgba(255, 0, 0, 0.1);
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    position: relative;
+    word-wrap: break-word;
+    word-break: break-all;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    background-color: #000;
+    -ms-scroll-chaining: none;
+    overscroll-behavior: contain;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.wrapper {
+    position: relative;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: auto;
+}
+
+.inner_layout {
+    display: inline-block;
+    width: calc(100vh * 0.5625);
+    height: 100%;
+    min-height: 640px;
+    min-width: 360px;
+    font-size: 0;
+    vertical-align: top;
+    text-align: left;
+    position: relative;
+}
+
+header {
+}
+
+header h1 a {
+    padding: 13px 15px;
+    display: inline-block;
+}
+header img {
+    display: inline-block;
+    width: 80px;
+    height: auto;
+}
+header .title_box {
+    color: #fff;
+    font-size: 18px;
+}
+
+.title_box {
+    min-height: 38px;
+    margin: 3px 15px 0;
+    display: flex;
+}
+.title_box a {
+    display: block;
+    width: 38px;
+    height: 38px;
+    position: relative;
+}
+.title_box .profile {
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.title_box .live {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.title_info {
+}
+
+.btn_group {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+}
+
+.header_btn {
+    border: 0;
+    margin: 10px;
+    color: #fff;
+    font-size: 1.5rem;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    text-indent: -9999px;
+    background: transparent url('../img/button.png') no-repeat;
+    overflow: hidden;
+}
+
+.header_btn.alarm {
+    background-position-x: 0px;
+}
+.header_btn.mute.on {
+    background-position-x: -22px;
+}
+.header_btn.mute.off {
+    background-position-x: -44px;
+}
+.header_btn.share {
+    background-position-x: -66px;
+}
+.header_btn.setting {
+    background-position-x: -132px;
+}
+.header_btn.close {
+    background-position-x: -88px;
+}

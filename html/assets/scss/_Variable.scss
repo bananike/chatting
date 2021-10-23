@@ -1,0 +1,65 @@
+// size
+$ratio: calc(100vh * 0.5625);
+$minHeight: 640px;
+$minWidth: 360px;
+
+// color
+$prim_color: #5cc4b7;
+$popup_color: #ffece3;
+$red_color: #ed1c24;
+
+// mixin
+@mixin random-bgr() {
+    background-color: rgb(random(255), random(255), random(255));
+}
+@mixin hideScrollBar() {
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+// animation
+@keyframes dots {
+    0% {
+        opacity: 0;
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        opacity: 1;
+        filter: hue-rotate(360deg);
+    }
+}
+@keyframes closingBG {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes openingBG {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes closingBox {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+@keyframes openingBox {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}

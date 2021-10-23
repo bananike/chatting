@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" type="text/css" href="assets/scss/index.css" />
+
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="background_content">
+                <!-- 영상, 이미지 위치 -->
+                <img src="https://placeimg.com/640/1280/any" alt="이미지 임시" />
+            </div>
+            <div class="inner_layout">
+                <div id="hidden_toggler"></div>
+                <!-- header -->
+                <header>
+                    <h1>
+                        <a href="#"><img src="assets/img/logo.png" alt="아라쇼 라이브" /></a>
+                    </h1>
+                    <div class="title_box" data-hidden-item="false">
+                        <a href="#" class="title_profile">
+                            <img class="profile" src="https://placeimg.com/64/64/any" alt="라이브 프로필 이미지" />
+                            <img class="live" src="assets/img/label_live.png" alt="라이브 방송" />
+                        </a>
+                        <a href="#" class="title_info">
+                            <h2>값비싸고 맛좋은 쇼핑몰 상품 Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum.</h2>
+                            <div>
+                                <span class="nickname">김닉네임</span>
+                                <span class="count_item"><ion-icon name="play-outline"></ion-icon><span id="viewCount">333,333</span></span>
+                                <span class="count_item"><ion-icon name="heart-outline"></ion-icon><span id="lineCount">666,666</span></span>
+                            </div>
+                        </a>
+                    </div>
+                </header>
+                <div class="btn_group">
+                    <button data-hidden-item="false" class="btn_icon alarm" type="button" id="onClickAlarm">알람설정</button>
+                    <button data-hidden-item="false" class="btn_icon mute on" type="button" id="onClickMute">음소거</button>
+                    <button data-hidden-item="true" class="btn_icon share" type="button" id="onClickShare">공유</button>
+                    <button data-hidden-item="false" class="btn_icon setting" type="button" id="onClickSetting">설정</button>
+                    <button class="btn_icon close" type="button" id="onClickClose">닫기</button>
+                </div>
+
+                <!-- before/after content -->
+                <div class="before_item" hidden>
+                    <span class="countdown">
+                        <!-- soon 클래스 추가 시 텍스트 색상 강조 -->
+                        <span id="countDown" class="">12:34:56</span>
+                        곧 라이브가 시작됩니다!
+                    </span>
+                    <div class="alarm_box">
+                        <button class="btn_alarm" type="button" id="onClickAlarm2"><span class="icon"></span>알림받기</button>
+                        <div class="popup_item">
+                            <i></i>
+                            <span><strong>라이브 방송 알림</strong>을 설정하시면<br />라이브 진행 시 알림을 보내드려요.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="after_item">
+                    <span class="text">라이브가 종료되었습니다.</span>
+                    <button class="btn_replay" type="button" id="onClickReplay">라이브 다시보기</button>
+                    <a href="#" class="other_live">다른 라이브 보기</a>
+                </div>
+
+                <!-- tag item -->
+                <div class="tag_item" data-hidden-item="false">
+                    <a href="#">
+                        <div class="thumbnail"><img src="https://placeimg.com/64/64/any" alt="상품 썸네일" /></div>
+                        <div class="tag_item_title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, iusto.</div>
+                        <div class="tag_item_price">
+                            <span class="rate">10%</span>
+                            100,000,000원
+                        </div>
+                    </a>
+                </div>
+
+                <!-- bottom right button group -->
+                <div class="bottom_btn_group" data-hidden-item="false">
+                    <div class="effect_wrap" id="heartContainer">
+                        <div class="shadow" id="shadow"></div>
+                        <img class="heart" id="bigHeart" src="assets/img/heart.png" alt="" />
+                    </div>
+                    <button type="button" class="buttom_btn like" id="onClickLike">좋아요</button>
+                    <button type="button" class="buttom_btn liveInfo" id="onClickLiveInfo">질문</button>
+                    <button type="button" class="buttom_btn comment" id="onClickComment">댓글쓰기</button>
+                    <button type="button" class="buttom_btn product" id="onClickProduct">
+                        전체 상품
+                        <span class="badge" id="count">9</span>
+                    </button>
+                </div>
+
+                <!-- chatting -->
+                <div class="chatting_notice" data-hidden-item="false">
+                    <div class="chatting_item"><ion-icon name="pricetag-outline"></ion-icon><span class="text">adipisicing elit. Iure, eum!</span></div>
+                </div>
+                <div class="chatting_wrap" data-hidden-item="false">
+                    <div class="chatting_inner" style="height: 337px">
+                        <div class="chatting_movebox" id="chattingList">
+                            <div class="chatting_item"><strong class="name">totti</strong><span class="text">?</span></div>
+                            <div class="chatting_item"><strong class="name">김간디</strong><span class="text">유혈사태다</span></div>
+                            <div class="chatting_item"><strong class="name">345</strong><span class="text">345</span></div>
+                            <div class="chatting_item"><strong class="name">totti</strong><span class="text">?</span></div>
+                            <div class="chatting_item"><strong class="name">김간디</strong><span class="text">유혈사태다</span></div>
+                            <div class="chatting_item"><strong class="name">345</strong><span class="text">345</span></div>
+                            <div class="chatting_item"><strong class="name">totti</strong><span class="text">?</span></div>
+                            <div class="chatting_item"><strong class="name">김간디</strong><span class="text">유혈사태다</span></div>
+                            <div class="chatting_item"><strong class="name">길게쓰는길게충</strong><span class="text">띄어쓰기없이길게쓰면이렇게되는걸보여주도록한다</span></div>
+                            <div class="chatting_item"><strong class="name">totti</strong><span class="text">?</span></div>
+                            <div class="chatting_item admin"><span class="text">돈을 받쳐라 어서</span></div>
+                            <div class="chatting_item"><strong class="name">김간디</strong><span class="text">유혈사태다</span></div>
+                            <div class="chatting_item myqna"><strong class="name">4tb34tb</strong><span class="text">tvertvwe4b</span></div>
+                            <div class="chatting_item"><strong class="name">이게</strong><span class="text">마지막</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- slide modal content: live info -->
+                <div class="slide_wrap" id="slideModal_LiveInfo">
+                    <div class="slide_back slideModalBackground"></div>
+                    <div class="slide_box">
+                        <div class="slide_title">
+                            <div class="tab_group">
+                                <a href="#" data-tab-btn="1" class="tab_btn active">
+                                    <h3>라이브 소개</h3>
+                                </a>
+                                <a href="#" data-tab-btn="2" class="tab_btn">
+                                    <h3>라이브 공지</h3>
+                                </a>
+                            </div>
+                            <button class="close onclickCloseSlide" type="button"><ion-icon name="close-outline"></ion-icon></button>
+                        </div>
+                        <div class="slide_content active" data-tab="1">
+                            <div class="textbox">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos voluptatibus sequi, perspiciatis inventore consectetur quis modi architecto laborum provident
+                                minus eius esse excepturi eligendi quaerat pariatur nemo fuga sunt fugit nesciunt. Sit, quos voluptatibus. Itaque sunt vero sapiente neque saepe. Lorem ipsum dolor sit
+                                amet consectetur adipisicing elit. Quibusdam fuga vero atque, at quo obcaecati fugit accusantium vitae voluptas provident officia, necessitatibus numquam fugiat.
+                                Consequatur doloremque nisi optio reprehenderit id? Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime laborum deleniti ratione possimus dolorum, sapiente
+                                vitae voluptatum facere quibusdam sunt, vel illo quae. Dolore harum temporibus dolores, dicta odit optio sunt suscipit deserunt amet magnam rem reprehenderit facilis.
+                                Omnis quia totam vero, neque, provident fuga quam, ullam accusantium eum corrupti itaque velit earum blanditiis iure? Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Ducimus, optio possimus quod ad dicta ut? Totam maxime quasi eum voluptates ratione, excepturi voluptatibus saepe quos maiores quis aperiam officiis
+                                molestias necessitatibus, blanditiis enim iste vitae laboriosam, nostrum voluptatem. Ullam deleniti eveniet eligendi voluptatem hic, quos, consequatur molestias
+                                deserunt, nihil eius incidunt? Vero, laborum. Sapiente accusantium iure id culpa officiis earum aliquam impedit suscipit quidem ipsa, numquam minus tempore nesciunt
+                                dicta sed cupiditate est porro placeat optio consequatur, unde possimus necessitatibus! Iusto maxime, autem sunt, dolore ullam quidem ducimus nihil laborum, in
+                                blanditiis temporibus quisquam debitis. Voluptas praesentium laboriosam odio nulla.
+                            </div>
+                        </div>
+                        <div class="slide_content" data-tab="2">rerer</div>
+                    </div>
+                </div>
+
+                <!-- slide modal content: chatting -->
+                <div class="slide_wrap" id="slideModal_Comment">
+                    <div class="slide_back white slideModalBackground"></div>
+
+                    <div class="slide_box chatting">
+                        <div class="emoji">
+                            <div class="emoji_item"><img src="assets/img/temp/emoji-01.png" alt="" /></div>
+                            <div class="emoji_item"><img src="assets/img/temp/emoji-02.png" alt="" /></div>
+                            <div class="emoji_item"><img src="assets/img/temp/emoji-03.png" alt="" /></div>
+                            <div class="emoji_item"><img src="assets/img/temp/emoji-04.png" alt="" /></div>
+                            <div class="emoji_item"><img src="assets/img/temp/emoji-05.png" alt="" /></div>
+                            <div class="emoji_item"><img src="assets/img/temp/emoji-06.png" alt="" /></div>
+                            <div class="emoji_item"><img src="assets/img/temp/emoji-07.png" alt="" /></div>
+                            <div class="emoji_item"><img src="assets/img/temp/emoji-08.png" alt="" /></div>
+                            <div class="emoji_item"><img src="assets/img/temp/emoji-09.png" alt="" /></div>
+                            <div class="emoji_item"><img src="assets/img/temp/emoji-10.png" alt="" /></div>
+                            <div class="emoji_item"><img src="assets/img/temp/emoji-11.png" alt="" /></div>
+                            <div class="emoji_item"><img src="assets/img/temp/emoji-12.png" alt="" /></div>
+                            <div class="emoji_item"><img src="assets/img/temp/emoji-13.png" alt="" /></div>
+                            <div class="emoji_item"><img src="assets/img/temp/emoji-14.png" alt="" /></div>
+                            <div class="emoji_item"><img src="assets/img/temp/emoji-15.png" alt="" /></div>
+                            <div class="emoji_item"><img src="assets/img/temp/emoji-16.png" alt="" /></div>
+                            <div class="emoji_item"><img src="assets/img/temp/emoji-17.png" alt="" /></div>
+                            <div class="emoji_item"><img src="assets/img/temp/emoji-18.png" alt="" /></div>
+                            <div class="emoji_item"><img src="assets/img/temp/emoji-19.png" alt="" /></div>
+                            <div class="emoji_item"><img src="assets/img/temp/emoji-20.png" alt="" /></div>
+                            <div class="emoji_item"><img src="assets/img/temp/emoji-21.png" alt="" /></div>
+                            <div class="emoji_item"><img src="assets/img/temp/emoji-22.png" alt="" /></div>
+                            <div class="emoji_item"><img src="assets/img/temp/emoji-23.png" alt="" /></div>
+                            <div class="emoji_item"><img src="assets/img/temp/emoji-24.png" alt="" /></div>
+                        </div>
+                        <textarea class="chatting_input" name="chattingInput" id="chattingInput" cols="1" placeholder="실시간 채팅에 참여하세요"></textarea>
+                        <button type="button" class="chatting_btn_qna" id="onClickChattingMode"><ion-icon name="chatbubbles-outline"></ion-icon></button>
+                        <button type="submit" class="chatting_btn_submit" id="onClickChattingSubmit">전송</button>
+                    </div>
+                </div>
+
+                <!-- slide modal content: product -->
+                <div class="slide_wrap" id="slideModal_Product">
+                    <div class="slide_back slideModalBackground"></div>
+                    <div class="slide_box">
+                        <div class="slide_title product_title">
+                            <div class="tab_group">
+                                <h3>라이브에 소개된 상품</h3>
+                            </div>
+                            <button class="close onclickCloseSlide" type="button"><ion-icon name="close-outline"></ion-icon></button>
+                        </div>
+                        <div class="slide_content product">
+                            <ul class="product_list">
+                                <li>
+                                    <div class="thumbnail">
+                                        <img src="https://placeimg.com/128/128/any" alt="상품이름" />
+                                    </div>
+                                    <a href="#" target="_blank" class="product_info">
+                                        <strong class="name">비싼 상품</strong>
+                                        <span class="price">
+                                            <span class="rate">30%</span>
+                                            <strong>999,000</strong>원
+                                        </span>
+                                        <span class="dc"> 최대 할인가 <strong>999,000</strong>원 </span>
+                                        <span class="store">삼성전자</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="thumbnail">
+                                        <img src="https://placeimg.com/128/128/any" alt="상품이름" />
+                                    </div>
+                                    <a href="#" target="_blank" class="product_info">
+                                        <strong class="name">비싼 상품</strong>
+                                        <span class="price">
+                                            <span class="rate">30%</span>
+                                            <strong>999,000</strong>원
+                                        </span>
+                                        <span class="dc"> 최대 할인가 <strong>999,000</strong>원 </span>
+                                        <span class="store">삼성전자</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="thumbnail">
+                                        <img src="https://placeimg.com/128/128/any" alt="상품이름" />
+                                    </div>
+                                    <a href="#" target="_blank" class="product_info">
+                                        <strong class="name">비싼 상품</strong>
+                                        <span class="price">
+                                            <span class="rate">30%</span>
+                                            <strong>999,000</strong>원
+                                        </span>
+                                        <span class="dc"> 최대 할인가 <strong>999,000</strong>원 </span>
+                                        <span class="store">삼성전자</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="thumbnail">
+                                        <img src="https://placeimg.com/128/128/any" alt="상품이름" />
+                                    </div>
+                                    <a href="#" target="_blank" class="product_info">
+                                        <strong class="name">비싼 상품</strong>
+                                        <span class="price">
+                                            <span class="rate">30%</span>
+                                            <strong>999,000</strong>원
+                                        </span>
+                                        <span class="store">삼성전자</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="thumbnail">
+                                        <img src="https://placeimg.com/128/128/any" alt="상품이름" />
+                                    </div>
+                                    <a href="#" target="_blank" class="product_info">
+                                        <strong class="name">이름이매우길고띄어쓰기가없는상품같지도않은상품</strong>
+                                        <span class="price">
+                                            <span class="rate">30%</span>
+                                            <strong>999,000</strong>원
+                                        </span>
+                                        <span class="dc"> 최대 할인가 <strong>999,000</strong>원 </span>
+                                        <span class="store">삼성전자</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- center popup -->
+                <div class="center_popup">
+                    <div class="back" id="onClickClosePopupBack"></div>
+                    <div class="img_box">
+                        <img src="https://placeimg.com/256/128/any" alt="" />
+                        <button type="button" id="onClickClosePopup"><ion-icon name="close-outline"></ion-icon></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- ionicon -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+
+    <!-- custom js -->
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/heart.js"></script>
+</html>
