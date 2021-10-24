@@ -22,12 +22,22 @@ const GLOBAL = {
         fixedScrollBottom: function () {
             $('.chatting_wrap').scrollTop($('.chatting_wrap')[0].scrollHeight);
         },
+        repositionPopupBtn: function () {
+            const btn = $('#onClickClosePopup');
+            const container = $('#onClickClosePopup').closest('.img_box');
+            const target = $('#onClickClosePopup').closest('.img_box').find('img');
+            btn.css('right', container.width() / 2 - target.width() / 2 + btn.width() / 2);
+            btn.attr('hidden', false);
+        },
     },
 };
-$(document).ready(function () {
+$(window).on('load', function () {
+    // 팝업 생성 후 클로즈 버튼 위치 초기화
+    GLOBAL.FUCNTION.repositionPopupBtn();
     // 로딩 후 채팅창 하단 스크롤
     GLOBAL.FUCNTION.fixedScrollBottom();
-
+});
+$(document).ready(function () {
     // 알림설정
     $('#onClickAlarm, #onClickAlarm2').on('click', function () {
         alert('alarm');
@@ -46,7 +56,11 @@ $(document).ready(function () {
 
     // 공유
     $('#onClickShare').on('click', function () {
-        console.log('share');
+        const target = $('#slideModal_Share');
+        target.addClass('active');
+        target.find('.slide_back').addClass('opening');
+        target.find('.slide_box').addClass('opening');
+        setTimeout(GLOBAL.FUCNTION.timeoutRemoveClass2, 300, target, 'opening');
     });
 
     // 세팅

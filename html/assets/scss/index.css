@@ -849,7 +849,7 @@ header .title_box .title_info div span.count_item *:first-child {
   border-radius: 50%;
   -webkit-animation: dots 1.5s forwards;
           animation: dots 1.5s forwards;
-  background-color: #e4a15c;
+  background-color: #2eb0d7;
 }
 
 .slide_wrap {
@@ -970,6 +970,10 @@ header .title_box .title_info div span.count_item *:first-child {
   color: #666;
 }
 
+.slide_box.share {
+  height: auto;
+}
+
 .slide_title {
   position: relative;
   padding: 15px 50px 12px;
@@ -1069,6 +1073,10 @@ header .title_box .title_info div span.count_item *:first-child {
 
 .slide_content .textbox {
   white-space: pre-line;
+}
+
+.slide_content.share {
+  display: block;
 }
 
 .emoji {
@@ -1209,6 +1217,34 @@ header .title_box .title_info div span.count_item *:first-child {
   color: #666;
 }
 
+.share_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.share_btn .btn {
+  width: 60px;
+  height: 60px;
+  border: 0;
+  outline: 0;
+  background: url("../img/share_button.png");
+  text-indent: -9999px;
+}
+
+.share_btn .btn.kakao {
+  background-position-x: 0px;
+}
+
+.share_btn .btn.url {
+  background-position-x: -60px;
+}
+
 .center_popup .back {
   width: 100%;
   height: 100%;
@@ -1226,13 +1262,21 @@ header .title_box .title_info div span.count_item *:first-child {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 111;
+  padding: 15px;
+  width: calc(100% - 30px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .center_popup img {
   border-radius: 15px;
-  overflow: hidden;
   -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
           box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+  max-width: 100%;
 }
 
 .center_popup button {
@@ -1244,8 +1288,8 @@ header .title_box .title_info div span.count_item *:first-child {
   background-color: transparent;
   border: 0;
   outline: 0;
-  top: 0;
-  right: 0;
+  top: 15px;
+  right: 15px;
   position: absolute;
 }
 /*# sourceMappingURL=index.css.map */

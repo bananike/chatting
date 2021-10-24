@@ -737,6 +737,9 @@ header {
                 color: #666;
             }
         }
+        &.share {
+            height: auto;
+        }
     }
     &_title {
         position: relative;
@@ -810,6 +813,9 @@ header {
         }
         .textbox {
             white-space: pre-line;
+        }
+        &.share {
+            display: block;
         }
     }
 }
@@ -923,6 +929,27 @@ header {
         }
     }
 }
+.share {
+    &_btn {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        .btn {
+            width: 60px;
+            height: 60px;
+            border: 0;
+            outline: 0;
+            background: url('../img/share_button.png');
+            text-indent: -9999px;
+            &.kakao {
+                background-position-x: 0px;
+            }
+            &.url {
+                background-position-x: -60px;
+            }
+        }
+    }
+}
 
 .center_popup {
     .back {
@@ -940,11 +967,16 @@ header {
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 111;
+        padding: 15px;
+        width: calc(100% - 30px);
+        // width: 100%;
+        display: flex;
+        justify-content: center;
     }
     img {
         border-radius: 15px;
-        overflow: hidden;
         box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+        max-width: 100%;
     }
     button {
         width: 30px;
@@ -955,8 +987,8 @@ header {
         background-color: transparent;
         border: 0;
         outline: 0;
-        top: 0;
-        right: 0;
+        top: 15px;
+        right: 15px;
         position: absolute;
     }
 }
