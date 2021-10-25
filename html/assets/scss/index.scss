@@ -715,6 +715,7 @@ header {
                     color: #303038;
                     letter-spacing: -0.25px;
                     word-break: break-all;
+                    resize: none;
                 }
                 &_btn {
                     &_qna {
@@ -901,6 +902,7 @@ header {
                 flex-direction: column;
                 justify-content: center;
                 color: #333;
+                min-height: 66px;
                 .name {
                     overflow: hidden;
                     text-overflow: ellipsis;
